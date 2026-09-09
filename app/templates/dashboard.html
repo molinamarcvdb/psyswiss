@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PsySwiss · Psychology jobs in Switzerland + licensing guide</title>
+<link rel="stylesheet" href="/static/style.css"/>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <div class="brand"><span class="logo">✚</span><div><b>PsySwiss</b><small>CH psychology jobs · info only</small></div></div>
+    <nav class="tabs-v">
+      <button data-tab="guide" class="on">📖 Licensing guide</button>
+      <button data-tab="jobs">💼 Jobs <span id="cntJobs" class="pill"></span></button>
+      <button data-tab="changes">🔔 Changes <span id="cntChg" class="pill warn"></span></button>
+    </nav>
+    <div class="side-head"><span>Saved searches</span><button id="btnNew" class="mini">＋ New</button></div>
+    <div id="searchList" class="search-list"></div>
+    <div class="side-head"><span>Scrape</span></div>
+    <button id="btnScrapeAll" class="primary block">⟳ Scrape all active</button>
+    <button id="btnScrapeOne" class="ghost block">⟳ Scrape this search</button>
+    <div id="runFeed" class="run-feed"></div>
+    <div class="side-foot"><span id="dbInfo"></span><p class="disclaimer">Info only — not legal advice. Always confirm with PsyKo / BAG and the canton.</p></div>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <div class="searchbox"><span class="sicon">⌕</span>
+        <input id="q" placeholder="Filter loaded jobs: title, company, city…" autocomplete="off"/>
+        <button id="qClear" class="mini hidden">✕</button>
+      </div>
+      <select id="typeSel"><option value="">Any contract</option></select>
+      <select id="sortSel">
+        <option value="newest">Newest posted</option>
+        <option value="az">Title A–Z</option>
+      </select>
+    </header>
+    <div id="status" class="status"></div>
+
+    <!-- GUIDE -->
+    <section id="tab-guide" class="tab">
+      <div class="hero card">
+        <h1>From EU psychology degrees to psychotherapist in Switzerland</h1>
+        <p class="mut">A plain-language map of the regulatory path for someone with a European
+        <b>bachelor's + master's in psychology</b> who wants to work as a psychotherapist in Switzerland.
+        Informational only — confirm every step with the linked authority.</p>
+        <div class="steps-mini" id="stepsMini"></div>
+      </div>
+      <div id="guideBody"></div>
+    </section>
+
+    <!-- JOBS -->
+    <section id="tab-jobs" class="tab hidden">
+      <div class="kpis" id="kpis"></div>
+      <div class="grid2">
+        <div class="card"><h3>Postings per snapshot</h3><canvas id="chTrend"></canvas><small id="trendNote"></small></div>
+        <div class="card"><h3>By contract type</h3><canvas id="chType"></canvas></div>
+      </div>
+      <div id="cards" class="cards"></div>
+    </section>
+
+    <!-- CHANGES -->
+    <section id="tab-changes" class="tab hidden">
+      <p class="hint">New = first time ever seen · Gone = missing 2 runs (likely filled) · Watching = left the window this run.</p>
+      <div class="grid3">
+        <div class="card"><h3 class="green">● New <span id="nNew"></span></h3><ul id="lNew" class="feed"></ul></div>
+        <div class="card"><h3 class="amber">● Back <span id="nRet"></span></h3><ul id="lRet" class="feed"></ul></div>
+        <div class="card"><h3 class="red">● Gone / watching <span id="nRem"></span></h3><ul id="lRem" class="feed"></ul></div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<div id="drawerWrap" class="drawer-wrap hidden">
+  <div id="drawerBg" class="drawer-bg"></div>
+  <aside class="drawer">
+    <button id="drawerClose" class="mini">✕</button>
+    <div id="drawerBody"></div>
+  </aside>
+</div>
+
+<div id="modalWrap" class="drawer-wrap hidden">
+  <div class="drawer-bg" data-close="1"></div>
+  <div class="modal">
+    <h3 id="modalTitle">New saved search</h3>
+    <p class="hint">A jobup.ch keyword search, re-run on every scrape. Blank = broad.</p>
+    <label>Name<input id="fName" placeholder="e.g. Psychotherapie Zürich"/></label>
+    <label>Keyword (jobup.ch <i>term</i>)<input id="fTerm" placeholder="e.g. psychotherapie, psychologue, neuropsychologie"/></label>
+    <div class="row">
+      <label>Site language<select id="fLang"><option value="en">English</option><option value="de">Deutsch</option><option value="fr">Français</option></select></label>
+      <label>Pages (list pages)<input id="fPages" type="number" value="2" min="1" max="10"/></label>
+    </div>
+    <label class="check"><input type="checkbox" id="fActive" checked/> Active</label>
+    <div class="row end"><button id="modalCancel" class="ghost">Cancel</button><button id="modalSave" class="primary">Save &amp; scrape</button></div>
+    <input type="hidden" id="fId"/>
+  </div>
+</div>
+
+<div id="toast" class="toast hidden"></div>
+<div id="scrapeOverlay" class="scrape-overlay hidden">
+  <div class="scrape-card">
+    <div class="spinner" id="scrapeSpinner"></div>
+    <h3 id="scrapeTitle">Scraping…</h3>
+    <p id="scrapeMsg" class="mut">Starting…</p>
+    <p id="scrapeElapsed" class="mut small">0s elapsed</p>
+    <div id="scrapeResult" class="scrape-result hidden"></div>
+    <button id="scrapeDismiss" class="primary hidden">Done</button>
+    <p class="mut small">Please wait — the page is locked until it finishes.</p>
+  </div>
+</div>
+<script src="/static/app.js"></script>
+</body>
+</html>
