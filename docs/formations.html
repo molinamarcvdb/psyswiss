@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>All accredited psychotherapy trainings in Switzerland — programmes, intakes &amp; contacts</title>
+<style>
+  :root{--bg:#f7f5f0;--card:#fff;--ink:#23272e;--mut:#6b7280;--acc:#1d5c4d;--acc2:#b7792b;--line:#e5e0d5;--bad:#a33b3b}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 Georgia,'Times New Roman',serif}
+  .wrap{max-width:960px;margin:0 auto;padding:32px 22px 80px}
+  header.hero{background:var(--acc);color:#fff;border-radius:16px;padding:30px;margin-bottom:22px}
+  header.hero h1{margin:0 0 8px;font-size:25px}
+  header.hero p{margin:6px 0;opacity:.92}
+  .toc{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 20px;font-family:system-ui,sans-serif;font-size:14px;position:sticky;top:10px;z-index:5}
+  .toc a{color:var(--acc)}
+  h2{font-size:22px;margin:34px 0 10px;border-bottom:2px solid var(--acc);padding-bottom:6px}
+  .filterbar{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0;font-family:system-ui,sans-serif}
+  .filterbar button{border:1px solid var(--line);background:#fff;border-radius:18px;padding:7px 14px;cursor:pointer;font-size:13px}
+  .filterbar button.on{background:var(--acc);color:#fff;border-color:var(--acc)}
+  .prog{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 22px;margin:14px 0}
+  .prog h3{margin:0 0 4px;font-size:18px}
+  .tag{display:inline-block;font:600 11px/1 system-ui,sans-serif;padding:4px 10px;border-radius:20px;margin:0 6px 8px 0}
+  .tag.ori{background:#e8eff0;color:var(--acc)}.tag.lang{background:#f3ecdd;color:#7a5b1d}.tag.city{background:#eee;color:#444}
+  .tag.dead{background:#fbe7e7;color:var(--bad)}.tag.open{background:#e2f4e9;color:var(--acc)}
+  .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:8px;margin:10px 0;font-size:14px}
+  .fact{background:#faf8f3;border:1px solid var(--line);border-radius:8px;padding:8px 12px}
+  .fact b{display:block;font:700 11px system-ui,sans-serif;text-transform:uppercase;letter-spacing:.05em;color:var(--mut)}
+  .contact{font-family:system-ui,sans-serif;font-size:14px;margin-top:6px}
+  .contact a{color:var(--acc);font-weight:600}
+  .mut{color:var(--mut)}.small{font-size:13px}
+  .btn{display:inline-block;font:600 14px system-ui,sans-serif;background:var(--acc);color:#fff;border-radius:10px;padding:10px 20px;text-decoration:none;margin:4px 8px 4px 0}
+  footer{margin-top:40px;color:var(--mut);font-size:13px;border-top:1px solid var(--line);padding-top:14px}
+  @media print{.filterbar,.btn{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <h1>🎓 All accredited psychotherapy trainings in Switzerland</h1>
+  <p><b>36 programmes</b> from the BAG's official accredited list (ordentlich akkreditiert, PsyG) — orientation,
+  institute, city, duration, cost, next intake, deadline &amp; contact. Scraped 9 Sept 2026; where a page gave no
+  intake date it says so honestly — check the linked page.</p>
+  <p><a class="btn" style="background:rgba(255,255,255,.15);border:1px solid #fff" href="index.html">← Guide &amp; jobs</a>
+  <a class="btn" style="background:rgba(255,255,255,.15);border:1px solid #fff" href="spontaneous.html">✉️ Spontaneous applications</a></p>
+</header>
+
+<nav class="toc"><b>Filter by orientation:</b> <span id="filters"></span></nav>
+
+<h2>Romandie first — French-language programmes (Geneva · Lausanne · Neuchâtel/Jura)</h2>
+<div id="list-romandie"></div>
+
+<h2>German-speaking Switzerland</h2>
+<div id="list-de"></div>
+
+<h2>Ticino (Italian)</h2>
+<div id="list-it"></div>
+
+<h2>How to read this + what “MAS/DAS” means for jobs</h2>
+<div class="prog">
+  <p style="margin-top:0"><b>MAS</b> (Master of Advanced Studies) = the long postgraduate diploma (2–6 yrs alongside work).
+  Accredited psychotherapy MAS tracks are what lead to the federal title. <b>DAS</b> = shorter diploma — deeper than a CAS
+  but <b>not enough alone</b> for the title. <b>CAS</b> = short modules, add-ons only.</p>
+  <p><b>Does orientation change job prospects?</b> From our 133-ad scrape: barely at entry level. Employers filter on
+  <i>en formation</i> + French C1 + experience. At the margins: <b>CBT</b> is most cited (addictions, hospitals);
+  <b>systemic</b> is valued in family/child/violence settings (MalleyPrairie asks for it); psychodynamic skews to
+  private practice. Example: <b>Mediversité Nyon</b> requires MAS enrollment, any orientation; <b>Clinique Belmont</b>
+  prefers CBT <i>or</i> any MAS/DAS in progress; <b>La Consultation</b> welcomes systemic, CBT, psychodynamic, ACT equally.</p>
+  <p class="mut small">Deadlines pass fast and cohorts fill 1–2 years ahead (UNIL systemic: next cohort Nov 2027, sign-up early 2027;
+  PSP Basel adult track: Jan 2029). Shortlist 2–3 tracks <em>now</em> and join their alert lists even before recognition lands.</p>
+</div>
+
+<footer>Sources: BAG accredited-programmes list + each institute's page, scraped 9 Sept 2026.
+<a href="https://www.bag.admin.ch/de/liste-der-akkreditierten-weiterbildungsgaenge">BAG list ↗</a> ·
+Intake dates change — always confirm on the linked page. Info only, not legal advice.</footer>
+</div>
+
+<script>
+const PROGRAMS = [
+<!-- ROMANDIE -->
+{n:"MAS en psychothérapie cognitivo-comportementale (MAS-TCC)",i:"Université de Genève — Centre de formation continue",c:"Genève",o:["TCC"],lang:"FR",dur:"2025–2031 (≈6 ans)",cost:"CHF 25'250 (4×)",fmt:"Présentiel, 87 ECTS",intake:"Cohort 2025–2031 running — next intake TBA",dead:"Was 28 Feb 2025 (past)",mail:"— (via formcont page)",url:"https://www.unige.ch/formcont/cours/mastcc"},
+{n:"DAS/Filière systémique → titre fédéral",i:"Université de Genève, Faculté de médecine",c:"Genève",o:["Systémique"],lang:"FR",dur:"2025–2027",cost:"CHF 24'000",fmt:"Présentiel",intake:"Cohort 2025–2027 running — next intake TBA",dead:"Was 30 May 2024 (past)",mail:"— (via formcont page)",url:"https://www.unige.ch/formcont/cours/das-psycho-syst-filiere"},
+{n:"MAS psychothérapie comportementale et cognitive",i:"UNIL–EPFL Formation continue",c:"Lausanne",o:["TCC"],lang:"FR",dur:"5–8 ans (70 ECTS)",cost:"see page",fmt:"Ven/sam 1–2×/mois, 9h–17h",intake:"Edition full — next sign-up TBA (alert list open)",dead:"Closed (édition complète)",mail:"tcc-mas@unil.ch",url:"http://www.formation-continue-unil-epfl.ch/formation/tcc-mas/"},
+{n:"MAS psychothérapie psychanalytique",i:"UNIL–EPFL Formation continue",c:"Lausanne",o:["Psychanalyse"],lang:"FR",dur:"2025–2031",cost:"see page",fmt:"Présentiel",intake:"Edition full — next sign-up TBA (alert list open)",dead:"Closed (édition complète)",mail:"maspsychanalyse@unil.ch",url:"http://www.formation-continue-unil-epfl.ch/formation/psychotherapie-psychanalytique-mas/"},
+{n:"MAS psychothérapie systémique",i:"UNIL–EPFL Formation continue",c:"Lausanne",o:["Systémique"],lang:"FR",dur:"Variable (modular)",cost:"see page",fmt:"Présentiel + lieu de pratique",intake:"⭐ Next cohort Nov 2027 — sign-up early 2027",dead:"Early 2027",mail:"mas-systemique@unil.ch",url:"http://www.formation-continue-unil-epfl.ch/formation/psychotherapie-systemique-mas/"},
+{n:"Filière psychothérapie enfant & adolescent",i:"Canton de Genève (ge.ch)",c:"Genève",o:["Enfant/Ado"],lang:"FR",dur:"see page",cost:"see page",fmt:"Présentiel",intake:"Check page (specialised child track)",dead:"Check page",mail:"— (via ge.ch page)",url:"https://www.ge.ch/formations-postgraduees-psychiatrie-psychotherapie-enfant-adolescent"},
+{n:"SPsyAJ — systémique (Arc jurassien)",i:"CNP — Institut de formation et recherche",c:"Neuchâtel/Jura",o:["Systémique"],lang:"FR",dur:"≥5 ans (1300 unités: 500 cours, 150 supervision…)",cost:"CHF 17'500",fmt:"Présentiel",intake:"2026/2027 intake CLOSED",dead:"Closed for 2026/27",mail:"spsyaj@cnp.ch",url:"https://www.cnp.ch/institut-de-formation-et-recherche/spsyaj/"},
+{n:"Formation systémique CERFASY",i:"CERFASY Neuchâtel",c:"Neuchâtel",o:["Systémique"],lang:"FR",dur:"see page",cost:"see page",fmt:"Présentiel",intake:"No date published — contact them",dead:"Ask",mail:"— (via cerfasy.ch)",url:"https://www.cerfasy.ch/formations.html"},
+<!-- DEUTSCHSCHWEIZ -->
+{n:"MAS Psychotherapie (uni, alle Richtungen)",i:"Universität Bern, Abt. Klinische Psychologie",c:"Bern",o:["Pluriel"],lang:"DE",dur:"4–6 Jahre",cost:"CHF 39'450",fmt:"Berufsbegleitend, praxisorientiert",intake:"Check page (rolling cohorts)",dead:"Check page",mail:"daniel.regli@unibe.ch",url:"https://www.unibe.ch/weiterbildungsangebote/mas_psychotherapie/index_ger.html"},
+{n:"KVT + Verhaltensmedizin",i:"UZH Psychologisches Institut",c:"Zürich",o:["TCC"],lang:"DE",dur:"see page",cost:"CHF 45'000",fmt:"Berufsbegleitend → eidg. Titel",intake:"Check page",dead:"Check page",mail:"weiterbildung@psychologie.uzh.ch",url:"https://www.psychologie.uzh.ch/de/bereiche/hea/klibio/weiterbildung/pt.html"},
+{n:"MAS Kinder- & Jugendpsychotherapie",i:"ZHAW Angewandte Psychologie",c:"Zürich",o:["Enfant/Ado"],lang:"DE",dur:"4–5 Jahre berufsbegleitend",cost:"CHF 29'900",fmt:"Berufsbegleitend",intake:"Start: Oct (annual — check year)",dead:"Annual deadline",mail:"info.iap@zhaw.ch",url:"https://www.zhaw.ch/de/psychologie/weiterbildung/detail/kurs/mas-kinder-jugendpsychotherapie/"},
+{n:"MAS Kinder-/Jugendpsychotherapie",i:"Uni Zürich + Freiburg (mas-kjpsych)",c:"Zürich",o:["Enfant/Ado"],lang:"DE",dur:"see page",cost:"see page",fmt:"Berufsbegleitend",intake:"Check page",dead:"Check page",mail:"weiterbildung-av-kj@unifr.ch",url:"https://www.mas-kjpsych.uzh.ch/de.html"},
+{n:"Kognitiv-behavioral + interpersonal (Klaus-Grawe)",i:"Klaus-Grawe-Institut",c:"Zürich",o:["TCC"],lang:"DE",dur:"see page",cost:"see page",fmt:"Berufsbegleitend",intake:"Check page",dead:"Check page",mail:"info@ifpt.ch",url:"https://www.klaus-grawe-institut.ch/bildung/"},
+{n:"Verhaltenstherapie (PSP Basel)",i:"PSP Basel",c:"Basel",o:["TCC"],lang:"DE",dur:"Multi-year",cost:"see page",fmt:"Berufsbegleitend",intake:"⭐ Adult track starts Jan 2029 — apply early",dead:"Check page",mail:"info@psp-basel.ch",url:"https://www.psp-basel.ch/"},
+{n:"Verhaltenstherapie (AIM)",i:"AIM",c:"—",o:["TCC"],lang:"DE",dur:"see page",cost:"see page",fmt:"Berufsbegleitend",intake:"Check page",dead:"Check page",mail:"— (via site)",url:"https://www.aim-verhaltenstherapie.ch/Home/"},
+{n:"Analytische Psychotherapie (Diplomlehrgang)",i:"C.G. Jung-Institut",c:"Küsnacht (ZH)",o:["Psychanalyse"],lang:"DE",dur:"≥8 Semester berufsbegleitend",cost:"CHF 61'730 (inkl. Lehranalyse+Supervision)",fmt:"Berufsbegleitend (+ EN blocks)",intake:"Rolling — check page",dead:"Check page",mail:"cg@junginstitut.ch",url:"https://junginstitut.ch/Bildungsangebote/Diplomlehrgang-Analytische-Psychotherapie"},
+{n:"Psychoanalytische Psychotherapie",i:"Freud-Institut Zürich",c:"Zürich",o:["Psychanalyse"],lang:"DE",dur:"4-jähriges Curriculum",cost:"see page",fmt:"Berufsbegleitend",intake:"Annual — deadline 1st (month on page)",dead:"1st of intake month",mail:"geschaeftsstelle@freud-institut.ch",url:"https://freud-institut.ch/aus-und-weiterbilden-psychoanalyse-zuerich/psychoanalytische-psychotherapi"},
+{n:"Psychoanalytische Psychotherapie (AZPP)",i:"Ausbildungszentrum AZPP",c:"Basel",o:["Psychanalyse"],lang:"DE",dur:"5 Jahre",cost:"see page",fmt:"Berufsbegleitend",intake:"⭐ Start Herbst 2027 — register by end May 2027",dead:"End May 2027",mail:"sekretariat@azpp.net",url:"https://www.azpp.net/"},
+{n:"Systemische Therapie (wilob)",i:"wilob AG",c:"—",o:["Systémique"],lang:"DE",dur:"see page",cost:"CHF 3'800/semester",fmt:"Berufsbegleitend",intake:"Start dates published on course list",dead:"Waiting list possible",mail:"kontakt@wilob.ch",url:"https://wilob.ch/kursuebersicht/psychotherapie-weiterbildung/"},
+{n:"Systemische Psychotherapie (Weiterbildung)",i:"Psychotherapieausbildung / pta-ag",c:"—",o:["Systémique"],lang:"DE",dur:"see page",cost:"see page",fmt:"Berufsbegleitend",intake:"Check page",dead:"Check page",mail:"info@psychotherapieausbildung.ch",url:"https://psychotherapieausbildung.ch/angebot/psychotherapieweiterbildung/"},
+{n:"Kinder/Jugend/Familie (KJF Luzern)",i:"Institut KJF Luzern",c:"Luzern",o:["Enfant/Ado"],lang:"DE",dur:"see page",cost:"see page",fmt:"Berufsbegleitend",intake:"⭐ Starts Aug 2027",dead:"Check page",mail:"— (via site form)",url:"https://www.institut-kjf.ch/"},
+{n:"Kinder-/Jugendpsychotherapie (IPKJ)",i:"IPKJ (Uni-Kliniken BS/BE/ZH)",c:"Basel/Bern/Zürich",o:["Enfant/Ado"],lang:"DE",dur:"see page",cost:"see page",fmt:"Berufsbegleitend, clinical",intake:"Check page (JS-light site)",dead:"Check page",mail:"— (via ipkj.ch)",url:"http://ipkj.ch/"},
+{n:"Körperzentrierte Psychotherapie IKP",i:"IKP-Therapien",c:"—",o:["Corps"],lang:"DE",dur:"≈4 Jahre berufsbegleitend",cost:"see page",fmt:"Hybrid",intake:"Cohort 2022–2026 style — check next",dead:"Check page",mail:"info@ikp-therapien.com",url:"https://www.ikp-therapien.com/psychotherapie.html"},
+{n:"Integrative Körperpsychotherapie IBP",i:"IBP Institut",c:"—",o:["Corps"],lang:"DE",dur:"see page",cost:"see page",fmt:"Berufsbegleitend",intake:"Page moved — verify via BAG list",dead:"Verify",mail:"— (verify)",url:"https://ibp-institut.ch/"},
+{n:"Personzentrierte GFK",i:"GFK-Institut",c:"Zürich",o:["Humaniste"],lang:"DE",dur:"≈ multi-year",cost:"see page",fmt:"Berufsbegleitend",intake:"Next round TBA — check page",dead:"Check page",mail:"info@gfk-institut.ch",url:"https://www.gfk-institut.ch/aus-und-fortbildungen/psychotherapie/"},
+{n:"Personzentrierte pca.acp (Rogers)",i:"pcaSuisse",c:"—",o:["Humaniste"],lang:"DE",dur:"see page",cost:"see page",fmt:"Berufsbegleitend",intake:"Check page",dead:"Check page",mail:"info@pcainstitut.ch",url:"https://www.pcasuisse.ch/bildungsinstitut/weiterbildung-psychotherapie"},
+{n:"MAS Humanistische Psychotherapie",i:"Universität Basel",c:"Basel",o:["Humaniste"],lang:"DE",dur:"see page",cost:"see page",fmt:"Berufsbegleitend",intake:"Check page",dead:"Check page",mail:"— (via unibas page)",url:"https://psychologie.unibas.ch/de/weiterbildung/mas-humanistische-psychotherapie/"},
+{n:"MAS Prozessbasierte Psychotherapie (PBT)",i:"Universität Luzern",c:"Luzern",o:["TCC"],lang:"DE",dur:"see page",cost:"CHF 31'500",fmt:"Berufsbegleitend",intake:"Check page",dead:"Check page",mail:"mas-psychotherapie@unilu.ch",url:"https://unilu.ch/mas-pbt"},
+{n:"ASP Integral — Prozessorientiert (IPA)",i:"Institut für Prozessarbeit",c:"Zürich",o:["Humaniste"],lang:"DE",dur:"see page",cost:"see page",fmt:"Berufsbegleitend",intake:"Check page",dead:"Check page",mail:"info@institut-prozessarbeit.ch",url:"https://www.institut-prozessarbeit.ch/de/Lehrgaenge/ASP"},
+{n:"Existenzanalytische Psychotherapie",i:"Existenzanalyse CH",c:"—",o:["Humaniste"],lang:"DE",dur:"see page",cost:"CHF 46'000",fmt:"Berufsbegleitend",intake:"Info events listed — check page",dead:"Check page",mail:"info@existenzanalyse.ch",url:"https://existenzanalyse.ch/bildungsangebot/lehrgang-existenzanalytische-psychotherapie"},
+{n:"Klinische Gestalttherapie (4 J.)",i:"IGW Schweiz",c:"Affoltern a.A.",o:["Humaniste"],lang:"DE",dur:"4 Jahre berufsbegleitend",cost:"see page",fmt:"Berufsbegleitend",intake:"Cohort-style — check page",dead:"Check page",mail:"office@igw-schweiz.ch",url:"https://igw-schweiz.ch/weiterbildung/4-jahre-klinische-gestalttherapie/"},
+{n:"Körperpsychotherapie (SGBAT)",i:"SGBAT",c:"—",o:["Corps"],lang:"DE",dur:"see page",cost:"see page",fmt:"3× 5-day trainings + 7 seminar days/yr",intake:"Annual cycle — check page",dead:"Check page",mail:"sekretariat@sgbat.ch",url:"https://sgbat.ch/weiterbildung"},
+{n:"Integrative Psychotherapie (SEAG)",i:"Stiftung SEAG",c:"—",o:["Intégrative"],lang:"DE",dur:"mind. multi-year, berufsbegleitend",cost:"see page",fmt:"Berufsbegleitend",intake:"Check page",dead:"Check page",mail:"info@integrative-therapie-seag.ch",url:"https://www.integrative-therapie-seag.ch/postgraduale-weiterbildung"},
+<!-- TICINO -->
+{n:"Psicoterapia psicoanalitica",i:"Scuola di Psicoterapia, Lugano",c:"Lugano",o:["Psychanalyse"],lang:"IT",dur:"see page",cost:"see page",fmt:"Presenziale",intake:"Check page",dead:"Check page",mail:"segreteria-scuola@psicoanalisi.ch",url:"https://www.psicoanalisi.ch/scuola-2/"},
+{n:"Sistemico-relazionale (Mara Selvini)",i:"Scuola Mara Selvini Palazzoli",c:"Ticino (sede)",o:["Systémique"],lang:"IT",dur:"4 anni (gennaio→)",cost:"see page",fmt:"Presenziale",intake:"Annual January start",dead:"Check page",mail:"infoticino@scuolamaraselvini.ch",url:"http://www.scuolamaraselvini.ch/"},
+{n:"IRG psicoanalitica",i:"IRG",c:"Ticino",o:["Psychanalyse"],lang:"IT",dur:"see page",cost:"see page",fmt:"Presenziale",intake:"Site cert issues — verify",dead:"Verify",mail:"— (verify)",url:"https://www.irgpsy.ch/"},
+];
+
+const ORIS = ["TCC","Systémique","Psychanalyse","Humaniste","Corps","Enfant/Ado","Intégrative","Pluriel"];
+const box = document.getElementById("filters");
+let active = new Set();
+ORIS.forEach(o=>{
+  const b=document.createElement("button"); b.textContent=o;
+  b.onclick=()=>{active.has(o)?active.delete(o):active.add(o);
+    [...box.children].forEach(x=>x.classList.toggle("on",active.has(x.textContent))); render();};
+  box.appendChild(b);
+});
+function secFor(lang){return lang==="FR"?"list-romandie":lang==="IT"?"list-it":"list-de";}
+function card(p){
+  const past = /past|closed|full|TBA|Check page|Verify/i.test(p.dead+p.intake) ? "" : "";
+  const open = /2027|2029|alert|annual|rolling|january|août|aug|nov/i.test(p.intake+p.dead) ? "open" : "";
+  return `<div class="prog" data-o="${p.o.join(",")}">
+    <h3>${p.n}</h3>
+    <div>${p.o.map(o=>`<span class="tag ori">${o}</span>`).join("")}<span class="tag lang">${p.lang}</span><span class="tag city">${p.c}</span></div>
+    <div><b>${p.i}</b></div>
+    <div class="facts">
+      <div class="fact"><b>Durée / Dauer</b>${p.dur}</div>
+      <div class="fact"><b>Coût / Kosten</b>${p.cost}</div>
+      <div class="fact"><b>Format</b>${p.fmt}</div>
+      <div class="fact"><b>Prochaine volée / intake</b>${p.intake}</div>
+      <div class="fact"><b>Délai / Deadline</b>${p.dead}</div>
+      <div class="fact"><b>Contact</b>${p.mail.includes("@")?`<a href="mailto:${p.mail}">${p.mail}</a>`:p.mail}</div>
+    </div>
+    <div class="contact"><a href="${p.url}" target="_blank">Programme page ↗</a> · <a href="https://www.bag.admin.ch/de/liste-der-akkreditierten-weiterbildungsgaenge">BAG list ↗</a></div>
+  </div>`;
+}
+function render(){
+  ["list-romandie","list-de","list-it"].forEach(id=>document.getElementById(id).innerHTML="");
+  let n=0;
+  PROGRAMS.forEach(p=>{
+    if(active.size && ![...active].some(a=>p.o.includes(a))) return;
+    document.getElementById(secFor(p.lang)).insertAdjacentHTML("beforeend",card(p)); n++;
+  });
+  document.getElementById("count").textContent = n+" / "+PROGRAMS.length+" shown";
+}
+render();
+</script>
+</body>
+</html>
